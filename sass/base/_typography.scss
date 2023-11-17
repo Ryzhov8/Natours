@@ -1,0 +1,36 @@
+body {
+  box-sizing: border-box;
+  padding: 2.4rem;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+  color: $color-gray;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.heading__primary {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.6rem;
+  color: #fff;
+  text-transform: uppercase;
+  backface-visibility: hidden;
+
+  &--main {
+    font-size: 6.2rem;
+    letter-spacing: 2.4rem;
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+  }
+
+  &--sub {
+    font-size: 2rem;
+    letter-spacing: 1.4rem;
+    animation-name: moveInRight;
+    animation-duration: 1s;
+  }
+}

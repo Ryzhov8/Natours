@@ -1,0 +1,26 @@
+.btn {
+  display: inline-block;
+  transition: all 300ms;
+
+  &--wide {
+    padding: 1.6rem 3.2rem;
+    border-radius: 50px;
+  }
+
+  &--circle {
+    display: flex;
+    border-radius: 50%;
+    padding: 0.8rem;
+  }
+
+  &--full {
+    color: $color-gray;
+    background-color: $color-white;
+
+    &:hover,
+    &:active {
+      color: $color-gray-dark;
+      background-color: #f8f9fa;
+    }
+  }
+}
