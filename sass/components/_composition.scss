@@ -1,0 +1,39 @@
+.composition {
+  display: block;
+  position: relative;
+
+  &__img {
+    position: absolute;
+    width: 55%;
+    border-radius: 2px;
+    outline-offset: 1rem;
+    transition: all 300ms;
+
+    box-shadow: 0 5px 10px rgba($color-black, 0.2);
+    &:nth-child(1) {
+      top: -5%;
+      left: 0%;
+    }
+
+    &:nth-child(2) {
+      top: 8%;
+      right: 0%;
+    }
+
+    &:nth-child(3) {
+      top: 35%;
+      left: 20%;
+    }
+
+    &:hover {
+      z-index: 999;
+      outline: $color-primary solid 1rem;
+
+      transform: scale(1.1);
+    }
+  }
+
+  &:hover &__img:not(:hover) {
+    scale: 0.9;
+  }
+}

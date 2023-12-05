@@ -8,8 +8,15 @@
 @import "base/utillities";
 
 @import "components/button";
+@import "components/composition";
+@import "components/feature";
+@import "components/card";
+@import "components/bg-video";
+@import "components/form";
 
 @import "layouts/header";
-@import "layouts/hero";
+@import "layouts/navigation";
+@import "layouts/footer";
+@import "layouts/grids";
 
 @import "pages/home";

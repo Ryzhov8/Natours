@@ -1,0 +1,157 @@
+.hero {
+  &__container {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 6.4rem;
+    text-align: center;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.section-about {
+  padding-top: 6.4rem;
+  margin-bottom: 6.4rem;
+
+  .grid {
+    gap: 12rem;
+  }
+}
+
+.section-features {
+  display: flex;
+  align-items: center;
+  margin-bottom: 6.4rem;
+  height: 95vh;
+  background-image: linear-gradient(
+      to right,
+      rgba($color-primary, 0.8),
+      rgba($color-primary-dark, 0.8)
+    ),
+    url("../../img/nat-4.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  clip-path: polygon(0 20vh, 100% 0, 100% 75vh, 0 100%);
+}
+
+.section-tours {
+  margin-bottom: 6.4rem;
+  text-align: center;
+
+  .grid {
+    gap: 5rem;
+    margin-bottom: 9rem;
+  }
+}
+
+.section-stories {
+  padding: 6.4rem 0;
+  position: relative;
+  .content-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 9rem;
+  }
+
+  .story {
+    width: 75%;
+    padding: 6rem 6rem 6rem 9rem;
+    background-color: rgba($color-white, 0.6);
+    box-shadow: 0 3rem 6rem rgba($color-black, 0.15);
+    transform: skewX(-10deg);
+
+    &__img-box {
+      position: relative;
+      height: 15rem;
+      width: 15rem;
+      border-radius: 50%;
+      float: left;
+      -webkit-shape-outside: circle(50% at 50% 50%);
+      shape-outside: circle(50% at 50% 50%);
+      transform: translateX(-3rem) skewX(10deg);
+      overflow: hidden;
+      transition: all 300ms;
+    }
+
+    &__img {
+      height: 100%;
+      object-position: center;
+      transform: scale(1.2);
+      transition: all 300ms;
+    }
+
+    &__caption {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, 0);
+      text-align: center;
+      text-transform: uppercase;
+      font-size: 1.7;
+      line-height: 1.4;
+      color: $color-white;
+      opacity: 0;
+      transition: all 300ms;
+    }
+
+    &__text-content {
+      transform: skewX(10deg);
+    }
+
+    &__text {
+      line-height: 1.5;
+    }
+
+    &:hover {
+      .story__img {
+        filter: blur(3px) brightness(75%);
+        transform: scale(1);
+      }
+
+      .story__caption {
+        transform: translate(-50%, -50%);
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.section-booking {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 6.4rem 0;
+  height: 100vh;
+  background-image: linear-gradient(
+    to right bottom,
+    $color-primary-light,
+    $color-primary-dark
+  );
+
+  .booking {
+    width: 75%;
+
+    background-image: url(../../img/nat-10.jpg);
+    background-position: center;
+    background-size: 100%;
+    border-radius: 3px;
+    overflow: hidden;
+
+    &__content-box {
+      width: 55%;
+      height: 100%;
+      padding: 4rem 16rem 4rem 4rem;
+      background-color: rgba($color-white, 0.85);
+      clip-path: polygon(0 0, 100% 0, 85% 100%, 0 100%);
+    }
+
+    .heading-secondary {
+      text-align: left;
+    }
+  }
+}
