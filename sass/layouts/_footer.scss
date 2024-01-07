@@ -4,8 +4,15 @@
   color: $color-white;
 
   .grid {
+    grid-template-columns: repeat(2, 1fr);
     row-gap: 7rem;
     column-gap: 15rem;
+
+    @include respond("tab-port") {
+      margin: 0 auto;
+      grid-template-columns: 1fr;
+      width: 75%;
+    }
   }
 
   &__logo {
@@ -16,10 +23,15 @@
 
   &__nav-list {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     gap: 2rem;
+    flex-wrap: wrap;
     text-transform: uppercase;
     font-size: 1.4rem;
+  }
+
+  &__nav-item {
+    text-align: center;
   }
 
   &__text {

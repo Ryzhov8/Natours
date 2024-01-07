@@ -1,4 +1,6 @@
 .form {
+  width: 75%;
+
   &__group {
     position: relative;
 
@@ -51,7 +53,6 @@
 
   &__group-radio {
     display: inline-block;
-    width: 49%;
     margin-bottom: 4.5rem;
   }
 
@@ -60,9 +61,10 @@
   }
 
   &__radio-label {
+    display: inline-block;
     position: relative;
     cursor: pointer;
-    padding-left: 3.8rem;
+    padding-left: 4rem;
   }
 
   &__radio-btn {
@@ -94,5 +96,18 @@
 
   &__radio-input:checked ~ &__radio-label &__radio-btn::after {
     opacity: 1;
+  }
+
+  @include respond("phone") {
+    width: 100%;
+
+    &__group:not(:last-child) {
+      margin-bottom: 2.5rem;
+    }
+
+    .btn {
+      display: block;
+      margin: 0 auto;
+    }
   }
 }

@@ -32,6 +32,15 @@ a {
     animation-name: moveInRight;
     animation-duration: 1s;
   }
+
+  @include respond("phone") {
+    row-gap: 4rem;
+
+    &--main {
+      font-size: 5rem;
+      letter-spacing: 2rem;
+    }
+  }
 }
 
 .heading-secondary {
@@ -42,10 +51,14 @@ a {
     $color-primary-dark
   );
   font-size: 3.6rem;
-  -webkit-background-clip: text;
+  background-clip: text;
   color: transparent;
   text-transform: uppercase;
   text-align: center;
+
+  @include respond("tab-port") {
+    font-size: 4rem;
+  }
 }
 
 .heading-tertiary {
@@ -62,6 +75,14 @@ a {
 
   &:not(:last-child) {
     margin-bottom: 3rem;
+  }
+
+  &--bold {
+    font-weight: 700;
+  }
+
+  &--uppercase {
+    text-transform: uppercase;
   }
 }
 

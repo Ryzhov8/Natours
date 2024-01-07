@@ -1,7 +1,6 @@
 .feature {
   justify-self: center;
   padding: 4rem 2.4rem 2.4rem;
-  width: 80%;
   border-radius: 5px;
   text-align: center;
   background-color: rgba($color-white, 0.8);
@@ -9,6 +8,21 @@
   cursor: default;
   transform: translateY(0) scale(1);
   transition: all 300ms;
+
+  @include respond("tab-port") {
+    max-width: 40rem;
+    &:nth-child(odd) {
+      justify-self: flex-end;
+    }
+
+    &:nth-child(even) {
+      justify-self: flex-start;
+    }
+  }
+
+  @include respond("phone") {
+    max-width: 60rem;
+  }
 
   &__icon {
     display: inline-block;
@@ -19,7 +33,7 @@
       $color-primary-light,
       $color-primary-dark
     );
-    -webkit-background-clip: text;
+    background-clip: text;
     color: transparent;
   }
 
@@ -29,5 +43,9 @@
 
   &:hover {
     transform: translateY(-2rem) scale(1.05);
+
+    @include respond("tab-port") {
+      transform: translateY(-1rem) scale(1.05);
+    }
   }
 }

@@ -3,10 +3,13 @@
     position: absolute;
     top: 45%;
     left: 50%;
+    height: 20%;
+    justify-content: space-between;
     display: flex;
     align-items: center;
     flex-direction: column;
     gap: 6.4rem;
+
     text-align: center;
     transform: translate(-50%, -50%);
   }
@@ -14,18 +17,23 @@
 
 .section-about {
   padding-top: 6.4rem;
-  margin-bottom: 6.4rem;
+  margin-bottom: 12rem;
 
   .grid {
-    gap: 12rem;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5rem;
+
+    @include respond("tab-port") {
+      grid-template-columns: 1fr;
+    }
   }
 }
 
 .section-features {
   display: flex;
   align-items: center;
+  padding: 15rem 0;
   margin-bottom: 6.4rem;
-  height: 95vh;
   background-image: linear-gradient(
       to right,
       rgba($color-primary, 0.8),
@@ -35,7 +43,26 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  clip-path: polygon(0 20vh, 100% 0, 100% 75vh, 0 100%);
+  transform: skewY(-7deg);
+
+  .container {
+    transform: skewY(7deg);
+  }
+
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5rem;
+
+    @include respond("tab-port") {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 3rem;
+    }
+
+    @include respond("phone") {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 5rem;
+    }
+  }
 }
 
 .section-tours {
@@ -43,14 +70,23 @@
   text-align: center;
 
   .grid {
+    grid-template-columns: repeat(3, 1fr);
     gap: 5rem;
     margin-bottom: 9rem;
+
+    @include respond("tab-port") {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 9rem;
+      max-width: 60rem;
+      margin: 0 auto 9rem;
+    }
   }
 }
 
 .section-stories {
   padding: 6.4rem 0;
   position: relative;
+
   .content-box {
     display: flex;
     flex-direction: column;
@@ -118,6 +154,19 @@
         opacity: 1;
       }
     }
+
+    @include respond("phone") {
+      padding: 3rem 3rem 3rem 6rem;
+      transform: skewX(0);
+
+      &__img-box {
+        transform: translateX(-3rem) skewX(0);
+      }
+
+      &__text-content {
+        transform: skewX(0);
+      }
+    }
   }
 }
 
@@ -126,7 +175,6 @@
   justify-content: center;
   align-items: center;
   padding: 6.4rem 0;
-  height: 100vh;
   background-image: linear-gradient(
     to right bottom,
     $color-primary-light,
@@ -146,7 +194,7 @@
     &__content-box {
       width: 55%;
       height: 100%;
-      padding: 4rem 16rem 4rem 4rem;
+      padding: 4rem;
       background-color: rgba($color-white, 0.85);
       clip-path: polygon(0 0, 100% 0, 85% 100%, 0 100%);
     }
@@ -154,5 +202,28 @@
     .heading-secondary {
       text-align: left;
     }
+
+    @include respond("tab-port") {
+      &__content-box {
+        width: 75%;
+      }
+    }
+
+    @include respond("phone") {
+      &__content-box {
+        width: 100%;
+        clip-path: none;
+      }
+
+      .heading-secondary {
+        text-align: center;
+      }
+    }
   }
+}
+
+.test {
+  display: flex;
+
+  gap: 2.5rem;
 }

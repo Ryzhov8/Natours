@@ -64,16 +64,17 @@
             src="./img/logo-white.png"
             alt="Natours logo"
             class="header__logo"
+            loading="lazy"
         /></a>
       </div>
       <div class="container hero__container">
         <h1 class="heading-primary">
-          <span class="heading-primary--main"> Outdoors</span>
+          <span class="heading-primary--main">Outdoors</span>
           <span class="heading-primary--sub">Is where life happens</span>
         </h1>
-        <a href="#" id="btn" class="btn btn--wide btn--white"
-          >Discover our tours</a
-        >
+        <a href="#tours" class="btn btn--wide btn--white">
+          Discover our tours
+        </a>
       </div>
     </header>
     <main>
@@ -82,7 +83,7 @@
           <h2 class="heading-secondary">
             Exciting tours for adventurous people
           </h2>
-          <div class="grid grid--two-columns">
+          <div class="grid">
             <div class="text-box">
               <h3 class="heading-tertiary">
                 You`re going to fall in love with nature
@@ -108,23 +109,26 @@
                 src="./img/nat-1-large.jpg"
                 alt=""
                 class="composition__img"
+                loading="lazy"
               />
               <img
                 src="./img/nat-2-large.jpg"
                 alt=""
                 class="composition__img"
+                loading="lazy"
               />
               <img
                 src="./img/nat-3-large.jpg"
                 alt=""
                 class="composition__img"
+                loading="lazy"
               />
             </div>
           </div>
         </div>
       </section>
       <section class="section section-features" id="features">
-        <div class="container grid grid--four-columns">
+        <div class="container grid">
           <div class="feature">
             <i class="feature__icon icon-basic-world"></i>
             <h3 class="feature__heading heading-tertiary">Explore the world</h3>
@@ -164,7 +168,7 @@
       <section class="section section-tours" id="tours">
         <div class="container">
           <h2 class="heading-secondary">Most popular tours</h2>
-          <div class="grid grid--three-columns">
+          <div class="grid">
             <div class="card card--orange">
               <div class="card__side card__side--front">
                 <div class="card__img-box"></div>
@@ -181,9 +185,13 @@
               </div>
               <div class="card__side card__side--back">
                 <p>Only <span class="card__price">$297</span></p>
-                <a href="#" id="btn" class="btn btn--wide btn--white"
-                  >Book now!</a
+                <button
+                  type="button"
+                  class="btn btn--wide btn--white"
+                  data-open-modal
                 >
+                  Book now!
+                </button>
               </div>
             </div>
             <div class="card card--green">
@@ -201,10 +209,14 @@
                 </ul>
               </div>
               <div class="card__side card__side--back">
-                <p>Only <span class="card__price">$297</span></p>
-                <a href="#" id="btn" class="btn btn--wide btn--white"
-                  >Book now!</a
+                <p>Only <span class="card__price">$344</span></p>
+                <button
+                  type="button"
+                  class="btn btn--wide btn--white"
+                  data-open-modal
                 >
+                  Book now!
+                </button>
               </div>
             </div>
             <div class="card card--blue">
@@ -222,16 +234,24 @@
                 </ul>
               </div>
               <div class="card__side card__side--back">
-                <p>Only <span class="card__price">$297</span></p>
-                <a href="#" id="btn" class="btn btn--wide btn--white"
-                  >Book now!</a
+                <p>Only <span class="card__price">$499</span></p>
+                <button
+                  type="button"
+                  class="btn btn--wide btn--white"
+                  data-open-modal
                 >
+                  Book now!
+                </button>
               </div>
             </div>
           </div>
-          <a href="#" id="btn" class="btn btn--wide btn--green"
-            >Discover our tours</a
+          <button
+            type="button"
+            class="btn btn--wide btn--green"
+            data-open-modal
           >
+            Book now!
+          </button>
         </div>
       </section>
       <section class="section section-stories" id="stories">
@@ -246,7 +266,12 @@
           <div class="content-box">
             <div class="story">
               <figure class="story__img-box">
-                <img src="./img/nat-8.jpg" alt="" class="story__img" />
+                <img
+                  src="./img/nat-8.jpg"
+                  alt=""
+                  class="story__img"
+                  loading="lazy"
+                />
                 <figcaption class="story__caption">Mary Smith</figcaption>
               </figure>
 
@@ -267,7 +292,12 @@
             </div>
             <div class="story">
               <figure class="story__img-box">
-                <img src="./img/nat-9.jpg" alt="" class="story__img" />
+                <img
+                  src="./img/nat-9.jpg"
+                  alt=""
+                  class="story__img"
+                  loading="lazy"
+                />
                 <figcaption class="story__caption">Curtis Jones</figcaption>
               </figure>
 
@@ -316,33 +346,35 @@
                   />
                   <label class="form__label" for="email">Email address</label>
                 </div>
-                <div class="form__group-radio">
-                  <input
-                    class="form__radio-input"
-                    type="radio"
-                    id="small"
-                    name="size"
-                    value="s"
-                    required
-                  />
-                  <label class="form__radio-label" for="small"
-                    ><span class="form__radio-btn"></span> Small tour
-                    group</label
-                  >
-                </div>
-                <div class="form__group-radio">
-                  <input
-                    class="form__radio-input"
-                    type="radio"
-                    id="large"
-                    name="size"
-                    value="l"
-                    required
-                  />
-                  <label class="form__radio-label" for="large"
-                    ><span class="form__radio-btn"></span> Large tour
-                    group</label
-                  >
+                <div class="test">
+                  <div class="form__group-radio">
+                    <input
+                      class="form__radio-input"
+                      type="radio"
+                      id="small"
+                      name="size"
+                      value="s"
+                      required
+                    />
+                    <label class="form__radio-label" for="small"
+                      ><span class="form__radio-btn"></span> Small tour
+                      group</label
+                    >
+                  </div>
+                  <div class="form__group-radio">
+                    <input
+                      class="form__radio-input"
+                      type="radio"
+                      id="large"
+                      name="size"
+                      value="l"
+                      required
+                    />
+                    <label class="form__radio-label" for="large"
+                      ><span class="form__radio-btn"></span> Large tour
+                      group</label
+                    >
+                  </div>
                 </div>
 
                 <button class="btn btn--wide btn--green" type="submit">
@@ -353,11 +385,65 @@
           </div>
         </div>
       </section>
+      <div class="backdrop is-hidden">
+        <div class="modal grid">
+          <div class="modal__img-box">
+            <img
+              class="modal__img"
+              src="./img/nat-8.jpg"
+              alt=""
+              loading="lazy"
+            />
+            <img
+              class="modal__img"
+              src="./img/nat-9.jpg"
+              alt=""
+              loading="lazy"
+            />
+          </div>
+          <div class="modal__text-content">
+            <button
+              type="button"
+              class="modal__close-btn btn--white btn--circle"
+            >
+              <ion-icon
+                name="close-outline"
+                class="modal__close-icon"
+              ></ion-icon>
+            </button>
+            <h2 class="modal__heading heading-secondary">Start booking now</h2>
+            <p class="text--bold text--uppercase">
+              Important - please, read the terms and conditions first
+            </p>
+            <div class="grid">
+              <p class="modal__text">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint
+                sunt dicta tempora sit cum minima porro eaque, optio molestiae,
+                ut laudantium veniam omnis, quidem aut molestias maiores illum
+                ad distinctio?
+              </p>
+              <p class="modal__text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Voluptatibus repudiandae recusandae iusto? Dicta suscipit ab
+                dignissimos nostrum. Nisi cumque ducimus, error illo facilis,
+                officiis, odit esse fuga debitis
+              </p>
+            </div>
+
+            <a href="" class="btn btn--wide btn--green">Book now</a>
+          </div>
+        </div>
+      </div>
     </main>
     <footer class="footer">
       <div class="container">
-        <div class="grid grid--two-columns">
-          <img class="logo footer__logo" src="./img/logo-green-2x.png" alt="" />
+        <div class="grid">
+          <img
+            class="logo footer__logo"
+            src="./img/logo-green-2x.png"
+            alt="Natours logo"
+            loading="lazy"
+          />
           <ul class="footer__nav-list">
             <li class="footer__nav-item">
               <a href="" class="footer__nav-link">Company</a>
