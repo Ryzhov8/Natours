@@ -59,8 +59,8 @@
     </div>
     <header class="header">
       <div class="header__container">
-        <a href="#"
-          ><img
+        <a href="#">
+          <img
             src="./img/logo-white.png"
             alt="Natours logo"
             class="header__logo"
@@ -106,19 +106,22 @@
             </div>
             <div class="composition">
               <img
-                src="./img/nat-1-large.jpg"
+                srcset="./img/nat-1.jpg 300w, ./img/nat-1-large.jpg 1000w"
+                sizes="(max-width: 600px) 31vw , (max-width: 900px) 30vw , (max-width: 1200px) 24vw , 300px"
                 alt=""
                 class="composition__img"
                 loading="lazy"
               />
               <img
-                src="./img/nat-2-large.jpg"
+                srcset="./img/nat-2.jpg 300w, ./img/nat-2-large.jpg 1000w"
+                sizes="(max-width: 600px) 31vw , (max-width: 900px) 30vw , (max-width: 1200px) 24vw , 300px"
                 alt=""
                 class="composition__img"
                 loading="lazy"
               />
               <img
-                src="./img/nat-3-large.jpg"
+                srcset="./img/nat-3.jpg 300w, ./img/nat-3-large.jpg 1000w"
+                sizes="(max-width: 600px) 31vw , (max-width: 900px) 30vw , (max-width: 1200px) 24vw , 300px"
                 alt=""
                 class="composition__img"
                 loading="lazy"
@@ -346,7 +349,7 @@
                   />
                   <label class="form__label" for="email">Email address</label>
                 </div>
-                <div class="test">
+                <div class="grid">
                   <div class="form__group-radio">
                     <input
                       class="form__radio-input"
@@ -440,7 +443,8 @@
         <div class="grid">
           <img
             class="logo footer__logo"
-            src="./img/logo-green-2x.png"
+            srcset="./img/logo-green-1x.png 150w, ./img/logo-green-2x.png 300w"
+            sizes="(max-width: 600px) 19vw , (max-width: 900px) 17vw , (max-width: 1200px) 14vw , 190px"
             alt="Natours logo"
             loading="lazy"
           />

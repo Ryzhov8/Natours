@@ -21,7 +21,7 @@
 
   .grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 5rem;
+    gap: 7rem;
 
     @include respond("tab-port") {
       grid-template-columns: 1fr;
@@ -203,6 +203,11 @@
       text-align: left;
     }
 
+    .grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2.5rem;
+    }
+
     @include respond("tab-port") {
       &__content-box {
         width: 75%;
@@ -218,12 +223,10 @@
       .heading-secondary {
         text-align: center;
       }
+
+      .grid {
+        text-align: center;
+      }
     }
   }
-}
-
-.test {
-  display: flex;
-
-  gap: 2.5rem;
 }
